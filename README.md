@@ -1,16 +1,8 @@
-# flutter_application_1
+# My Flutter Learning Diary
 
-A new Flutter project.
+Hello! This is where I collect my work while learning Flutter and Dart.
 
-## Getting Started
+I have completed the setup and I am currently working on understanding the basic widget structures. I aim to progress by adding something new every day and sharing what I've learned here.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+*Mustafa Ali Van*
