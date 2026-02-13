@@ -1,4 +1,4 @@
-# Flutter Öğrenme Günlüğü
+# Öğrenme Notları
 
 Bu depo Flutter öğrenme sürecimin kişisel kaydıdır.
 Her commit denediğim, yanlış anladığım veya sonradan kavradığım bir davranışı içerir.
