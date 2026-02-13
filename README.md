@@ -1,7 +1,7 @@
 # Flutter Learning Repository
 
 ## Preview
-![First UI](first_ui.png)
+<img src="first_ui.png" width="300">
 
 This repository documents my hands-on learning process while studying Flutter and Dart.  
 Instead of only following tutorials, I rebuild concepts by writing and modifying code daily.
