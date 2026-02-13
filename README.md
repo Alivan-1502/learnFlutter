@@ -1,16 +1,27 @@
-# My Flutter Learning Diary
+# Flutter Learning Repository
 
-Hello! This is where I collect my work while learning Flutter and Dart.
+This repository documents my hands-on learning process while studying Flutter and Dart.  
+Instead of only following tutorials, I rebuild concepts by writing and modifying code daily.
 
-I have completed the setup and I am currently working on understanding the basic widget structures. I aim to progress by adding something new every day and sharing what I've learned here.
+## Goals
+- Understand Flutter widget architecture
+- Learn layout logic (constraints, alignment, nesting)
+- Build small UI implementations from scratch
+- Develop mobile development habits
 
-## 📝 Bugün Ne Öğrendim? (12 Şubat)
-- **Widget Kavramına Giriş:** Flutter'daki "her şey bir widget'tır" mantığını öğrendim.
-- **MaterialApp & Scaffold:** Uygulamanın ana çerçevesini ve temel iskelet yapısını kurdum.
-- **AppBar Kullanımı:** Uygulamanın üst barını özelleştirmeyi denedim.
-- **Center & Text Widgetları:** İçerikleri ekrana yerleştirme ve hizalamayı pratik ettim.
-- **TextStyle:** Yazı boyutları ve renkleri üzerinde çalıştım.
-- **Hot Reload:** Kod değişikliklerini anında emülatöre yansıtma sürecini deneyimledim.
+## What I Practice Here
+- MaterialApp & Scaffold structure
+- Basic widgets (Text, Center, Container)
+- Styling & TextTheme
+- Layout positioning
+- Hot reload workflow
 
----
-*Mustafa Ali Van*
+## Project Structure
+Each update represents a learning iteration, not a finished product.  
+The repository evolves as I understand the framework deeper.
+
+## Next Targets
+- Stateless vs Stateful widgets
+- Navigation & routes
+- Lists & dynamic UI
+- Simple app projects
