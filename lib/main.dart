@@ -16,9 +16,15 @@ class IlkUygulamaWidget extends StatelessWidget {
         body: Material(
           color: Colors.cyan,
           child: Center(
-            child: Text(
-              "Hello Flutter!${selamVer()}",
-              style: TextStyle(color: Colors.black, fontSize: 50.0),
+            child: Container(
+              margin: EdgeInsets.all(40),
+              padding: EdgeInsets.all(20),
+              color: Colors.white,
+
+              child: Text(
+                "Hello Flutter!${selamVer()}",
+                style: TextStyle(color: Colors.black, fontSize: 50.0),
+              ),
             ),
           ),
         ),
@@ -32,11 +38,11 @@ String selamVer() {
   int saat = simdi.hour;
   if (saat < 13) {
     return "Günaydın";
-  } else if(saat < 17 ){
+  } else if (saat < 17) {
     return "İyi Günler!";
-  } else if(saat < 20) {
+  } else if (saat < 20) {
     return "iyi Akşamlar";
-  }else{
+  } else {
     return "iyi Geceler";
   }
 }
