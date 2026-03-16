@@ -1,8 +1,8 @@
 class Urun {
   int? _id;
-  String _ad;
-  String _aciklama;
-  double _fiyat;
+  late String _ad;
+  late String _aciklama;
+  late double _fiyat;
 
   Urun(this._ad, this._aciklama, this._fiyat);
   Urun.withId(this._id, this._ad, this._aciklama, this._fiyat);
@@ -43,10 +43,11 @@ class Urun {
     }
     return map;
   }
-  Urun.fromObject(dynamic o){
-    _id = o ["id"];
-    _ad = o ["ad"];
-    _aciklama = o ["aciklama"];
-    _fiyat = double.tryParse(o["fiyat"].toString()) ?? 0.0;   }
 
+  Urun.fromObject(dynamic o) {
+    _id = o["id"];
+    _ad = o["ad"];
+    _aciklama = o["aciklama"];
+    _fiyat = double.tryParse(o["fiyat"].toString()) ?? 0.0;
+  }
 }
