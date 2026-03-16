@@ -26,15 +26,26 @@ class DbHelper {
     _db ??= await dbOlustur();
     return _db;
   }
-  Future<Database>dbOlustur() async{
-    Directory dosya = await getApplicationDocumentsDirectory();
-    String yol = dosya.path + "eticaret.db";
 
-    var eTicaret = await openDatabase(yol,version: 1, onCreate: olustur);
+  Future<Database> dbOlustur() async {
+    Directory dosya = await getApplicationDocumentsDirectory();
+    String yol = "${dosya.path}/eticaret.db";
+
+    var eTicaret = await openDatabase(yol, version: 1, onCreate: olustur);
+
+    return eTicaret;
   }
 
-  void olustur (Database db, int version)async{
-  await db.execute("Create table $tblUrun($colId integer primary key,"
-  "$colAd text, $colAciklama text, $colFiyat int)");    
+  void olustur(Database db, int version) async {
+    await db.execute(
+      "Create table $tblUrun($colId integer primary key,"
+      "$colAd text, $colAciklama text, $colFiyat int)",
+    );
+  }
+
+  Future<int> ekle(Urun urun) async {
+    Database db = await this.db;
+    var sonuc = await db.insert(tblUrun, urun.mapYap());
+    return sonuc;
   }
 }
