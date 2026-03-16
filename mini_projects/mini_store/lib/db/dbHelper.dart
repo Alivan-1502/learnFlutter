@@ -48,4 +48,10 @@ class DbHelper {
     var sonuc = await db.insert(tblUrun, urun.mapYap());
     return sonuc;
   }
+
+  Future<int> guncelle(Urun urun) async {
+    Database db = await this.db;
+    var sonuc = await db.update(tblUrun, urun.mapYap(), where: "colId =?", whereArgs: [urun.id]);
+    return sonuc;
+  }
 }
