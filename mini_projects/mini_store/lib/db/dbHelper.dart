@@ -54,4 +54,9 @@ class DbHelper {
     var sonuc = await db.update(tblUrun, urun.mapYap(), where: "colId =?", whereArgs: [urun.id]);
     return sonuc;
   }
+  Future <int> sil(int id)async{
+    Database db = await this.db;
+    var sonuc = db.rawDelete("Delete from $tblUrun where $colId $id");
+    return sonuc;
+  }
 }
