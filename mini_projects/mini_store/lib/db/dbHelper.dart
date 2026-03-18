@@ -59,4 +59,10 @@ class DbHelper {
     var sonuc = db.rawDelete("Delete from $tblUrun where $colId $id");
     return sonuc;
   }
+
+  Future <List> getUrunler() async{
+    Database db = await this.db;
+    var result = await db.rawQuery("Select * from $tblUrun");
+    return result; 
+  }
 }
