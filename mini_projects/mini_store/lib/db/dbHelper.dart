@@ -20,11 +20,11 @@ class DbHelper {
   }
 
   //veritabanına ulaşmak
-  static Database _db;
+  static Database? _db;
 
   Future<Database> get db async {
     _db ??= await dbOlustur();
-    return _db;
+    return _db!;
   }
 
   Future<Database> dbOlustur() async {
@@ -54,7 +54,7 @@ class DbHelper {
     var sonuc = await db.update(
       tblUrun,
       urun.mapYap(),
-      where: "colId =?",
+      where: "$colId = ?",
       whereArgs: [urun.id],
     );
     return sonuc;
@@ -62,7 +62,9 @@ class DbHelper {
 
   Future<int> sil(int id) async {
     Database db = await this.db;
-    var sonuc = db.rawDelete("Delete from $tblUrun where $colId $id");
+    var sonuc = await db.rawDelete("Delete from $tblUrun where $colId = ?", [
+      id,
+    ]);
     return sonuc;
   }
 
