@@ -51,18 +51,24 @@ class DbHelper {
 
   Future<int> guncelle(Urun urun) async {
     Database db = await this.db;
-    var sonuc = await db.update(tblUrun, urun.mapYap(), where: "colId =?", whereArgs: [urun.id]);
+    var sonuc = await db.update(
+      tblUrun,
+      urun.mapYap(),
+      where: "colId =?",
+      whereArgs: [urun.id],
+    );
     return sonuc;
   }
-  Future <int> sil(int id)async{
+
+  Future<int> sil(int id) async {
     Database db = await this.db;
     var sonuc = db.rawDelete("Delete from $tblUrun where $colId $id");
     return sonuc;
   }
 
-  Future <List> getUrunler() async{
+  Future<List> getUrunler() async {
     Database db = await this.db;
     var result = await db.rawQuery("Select * from $tblUrun");
-    return result; 
+    return result;
   }
 }
